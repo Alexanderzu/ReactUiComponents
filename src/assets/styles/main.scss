@@ -1,0 +1,103 @@
+@import "_normalize.scss";
+@import "_variables.scss";
+@import "_reset.scss";
+@import "_bootstrap-lg-grid.scss";
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.checkbox-switcher {
+  position: relative;
+  width: 90px;
+
+  &__label {
+    padding: 0;
+    margin-left: 25px;
+    cursor: pointer;
+
+    input {
+      display: none;
+
+      & + .checkbox-switcher__box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 30px;
+        height: 16px;
+        background-color: $base_color;
+        border: 1px solid $base_color;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          display: block;
+          width: 50%;
+          height: 100%;
+          background: $base_background;
+          border-radius: 50%;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      &:checked + .checkbox-switcher__box {
+        background: $alpha_background;
+        border: 1px solid $alpha_background;
+
+        &:before {
+          left: 0%;
+        }
+      }
+    }
+  }
+
+  .checkbox-switcher-check {
+    position: absolute;
+    cursor: default;
+    line-height: 16px;
+
+    &.disabled {
+      color: $base_color;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  &__on {
+    left: 0;
+  }
+
+  &__off {
+    right: 0;
+  }
+}
+
+.search {
+  & input[type=text] {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+
+.tabs {
+  &__link {
+    padding: 0;
+    margin: 0;
+    &_item {
+      background-color: #ccc;
+      display: inline-block;
+      cursor: pointer;
+      width: 33.333%;
+    }
+  }
+}
+
+.tabs__link_item.active {
+  background-color: #f0f
+}
