@@ -962,9 +962,11 @@ input[type="reset"].mobile {
     background-color: #ccc;
     display: inline-block;
     cursor: pointer;
-    width: 33.333%; }
+    width: 33.333%;
+    padding: 10px; }
 
 .tabs__link_item.active {
-  background-color: #f0f; }
+  background-color: #000000;
+  color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

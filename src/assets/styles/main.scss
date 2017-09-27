@@ -94,10 +94,13 @@
       display: inline-block;
       cursor: pointer;
       width: 33.333%;
+      padding: 10px;
+      font-weight: bold;
     }
   }
 }
 
 .tabs__link_item.active {
-  background-color: #f0f
+  background-color: #000000;
+  color: #fff;
 }
